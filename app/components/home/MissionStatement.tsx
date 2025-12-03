@@ -1,41 +1,56 @@
+import Link from "next/link";
+import { MISSION_CONTENT } from "@/app/constants";
+
 export default function MissionStatement() {
   return (
-    <section className="relative py-12 lg:py-20 px-4 lg:px-6 min-h-[500px] lg:min-h-[600px]">
-      {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-        }}
-      >
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
-
-      <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Left Content */}
-          <div className="animate-slide-in-left">
-            <div className="backdrop-blur-sm bg-black/20 p-6 lg:p-8 border-r-4 border-b-4 border-white/30">
-              <h2 className="text-2xl lg:text-3xl xl:text-4xl font-heading font-bold text-white mb-4 lg:mb-6">
-                Defined by the Quality of Our People
-              </h2>
-              <p className="text-base lg:text-lg text-white/90 leading-relaxed mb-6">
-                Our people bring technical excellence, ingenuity, drive, creativity, and experience to help our customers achieve their bold visions.
-              </p>
-              <div className="flex items-center space-x-2">
-                <span className="text-sm font-semibold text-yellow-400">
-                  Get Our Stories Today
+    <section className="py-16 lg:py-24 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left Content */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-full">
+                <span className="text-xs sm:text-sm font-medium text-foreground uppercase tracking-wide">
+                  Our Mission
                 </span>
-                <svg className="w-4 h-4 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
               </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground leading-tight">
+                {MISSION_CONTENT.title}
+              </h2>
+              <p className="text-base sm:text-lg text-text-light leading-relaxed">
+                {MISSION_CONTENT.description}
+              </p>
             </div>
-          </div>
 
-          {/* Right side - empty space to maintain layout */}
-          <div className="animate-slide-in-right">
-            {/* This div maintains the grid structure but is visually empty since the image is now the background */}
+            {/* Right Content - Values Grid */}
+            <div className="grid grid-cols-2 gap-6">
+              {MISSION_CONTENT.values.map((value, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                >
+                  <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mb-4">
+                    <svg
+                      className="w-6 h-6 text-accent"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-lg font-heading font-bold text-foreground mb-2">
+                    {value.title}
+                  </h3>
+                  <p className="text-sm text-text-light">{value.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

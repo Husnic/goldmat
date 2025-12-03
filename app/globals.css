@@ -2,34 +2,36 @@
 
 :root {
   /* Goldmat Color Palette */
-  --primary: #1A3264;
-  --accent: #9E0B0F;
-  --secondary: #6F787F;
+  --primary: #1A3264; /* Deep blue - maintained */
+  --primary-light: #2A4A8F;
+  --primary-dark: #0F1F3D;
+  --accent: #9E0B0F; /* Red accent for CTAs */
+  --secondary: #6F787F; /* Gray - maintained */
+  --secondary-light: #E5E7EB;
   --background: #FFFFFF;
   --foreground: #171717;
-  
-  /* Font Variables
-  --font-heading: 'Oswald', sans-serif;
-  --font-body: 'Poppins', sans-serif; */
+  --text-light: #6B7280;
+  --border: #E5E7EB;
 }
 
 @theme inline {
   /* Custom Colors */
   --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
   --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
   --color-secondary: var(--secondary);
+  --color-secondary-light: var(--secondary-light);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text-light: var(--text-light);
+  --color-border: var(--border);
   
   /* Font Families */
   --font-heading: var(--font-heading);
   --font-body: var(--font-body);
   --font-sans: var(--font-body);
-  
-  /* Custom Color Classes */
-  --color-goldmat-primary: var(--primary);
-  --color-goldmat-accent: var(--accent);
-  --color-goldmat-secondary: var(--secondary);
 }
 
 @layer base {

@@ -1,7 +1,6 @@
 import HeroSection from "./components/home/HeroSection";
-import ServicesSection from "./components/home/ServicesSection";
 import AboutSection from "./components/home/AboutSection";
-import CoreCompetencies from "./components/home/CoreCompetencies";
+import ServicesSection from "./components/home/ServicesSection";
 import ProjectSnapshot from "./components/home/ProjectSnapshot";
 import MissionStatement from "./components/home/MissionStatement";
 import TestimonialSection from "./components/home/TestimonialSection";
@@ -12,8 +11,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
       <HeroSection />
-      <ServicesSection />
       <AboutSection />
+      <ServicesSection />
       <ProjectSnapshot />
       <MissionStatement />
       <TestimonialSection />
