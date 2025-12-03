@@ -1,10 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MISSION_CONTENT } from "@/app/constants";
 
 export default function MissionStatement() {
   return (
-    <section className="py-16 lg:py-24 bg-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 lg:py-24 bg-gray-50 relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 opacity-20">
+        <Image src="/bg-2.png" alt="Background" fill className="object-cover" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left Content */}
@@ -17,7 +23,7 @@ export default function MissionStatement() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground leading-tight">
                 {MISSION_CONTENT.title}
               </h2>
-              <p className="text-base sm:text-lg text-text-light leading-relaxed">
+              <p className="text-base sm:text-lg leading-relaxed">
                 {MISSION_CONTENT.description}
               </p>
             </div>

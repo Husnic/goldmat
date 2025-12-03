@@ -7,16 +7,16 @@ export default function Footer() {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Why Choose Us", href: "/about#why-choose-us" },
-    { name: "Services", href: "/services" },
+    { name: "Services", href: "/#services" },
     { name: "Our Team", href: "/about#team" },
-    { name: "Solutions", href: "/services" },
+    { name: "Solutions", href: "/#services" },
   ];
 
   const supportLinks = [
     { name: "Support", href: "/contact" },
-    { name: "Terms & Conditions", href: "/terms" },
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "News & Updates", href: "/news" },
+    { name: "Projects", href: "/projects" },
+    { name: "Terms & Conditions", href: "/#" },
+    { name: "Privacy Policy", href: "/#" },
     { name: "Contacts", href: "/contact" },
   ];
 

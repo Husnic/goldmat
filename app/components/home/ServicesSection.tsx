@@ -32,6 +32,7 @@ export default function ServicesSection() {
 
   return (
     <section
+      id="services"
       className="relative py-16 lg:py-24 overflow-hidden"
       style={{
         backgroundImage: "url(/bg-4.jfif)",

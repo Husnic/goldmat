@@ -45,7 +45,10 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/contact" className="btn-primary">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-foreground font-semibold rounded-full border-2 border-gray-200 hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 shadow-sm hover:shadow-md"
+            >
               Get Quote
             </Link>
           </div>

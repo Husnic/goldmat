@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { CTA_CONTENT } from "@/app/constants";
 
 export default function CallToAction() {
@@ -7,11 +8,18 @@ export default function CallToAction() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="bg-primary rounded-[3rem] overflow-hidden relative">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+            {/* Background Image */}
+            <div className="absolute inset-0 opacity-20">
+              <Image
+                src="/bg-6.webp"
+                alt="Background"
+                fill
+                className="object-cover"
+              />
             </div>
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-primary/80"></div>
 
             {/* Content */}
             <div className="relative z-10 py-16 lg:py-20 px-8 lg:px-16 text-center">
