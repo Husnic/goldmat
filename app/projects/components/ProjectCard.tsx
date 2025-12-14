@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { type Project } from "../../data/projects";
 
 interface ProjectCardProps {
@@ -8,89 +9,67 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   return (
-    <Link
-      href={`/projects/${project.id}`}
-      className="group flex h-full self-stretch"
-    >
-      <div
-        className="bg-white overflow-hidden border-r-4 border-b-4 border-[var(--accent)] hover:transform hover:translate-x-1 hover:translate-y-1 transition-all duration-300 animate-fade-in h-full flex flex-col h-full"
-        style={{ animationDelay: `${index * 0.1}s` }}
-      >
-        <div className="relative">
-          <img
+    <Link href={`/projects/${project.id}`} className="group block h-full">
+      <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
+        <div className="relative h-64 overflow-hidden">
+          <Image
             src={project.image}
             alt={project.title}
-            className="w-full h-48 lg:h-56 object-cover"
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
           />
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+
           {/* Category Badge */}
           <div className="absolute top-4 left-4">
-            <span className="bg-[var(--accent)] text-white text-xs font-medium px-3 py-1 uppercase tracking-wider">
+            <span className="bg-accent text-white text-xs font-semibold px-4 py-2 rounded-full uppercase tracking-wider">
               {project.category}
             </span>
           </div>
-          {/* Tags overlay */}
-          <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-            {project.tags.slice(0, 2).map((tag, tagIndex) => (
-              <span
-                key={tagIndex}
-                className="bg-white text-[var(--primary)] text-xs font-medium px-3 py-1 border border-gray-300"
+
+          {/* Location */}
+          <div className="absolute bottom-4 left-4 right-4">
+            <div className="flex items-center text-white text-sm">
+              <svg
+                className="w-4 h-4 mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
               >
-                {tag}
-              </span>
-            ))}
-            {project.tags.length > 2 && (
-              <span className="bg-white text-[var(--primary)] text-xs font-medium px-3 py-1 border border-gray-300">
-                +{project.tags.length - 2}
-              </span>
-            )}
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              </svg>
+              <span className="font-medium">{project.location}</span>
+            </div>
           </div>
         </div>
 
         <div className="p-6 flex-grow flex flex-col">
-          <h3 className="text-xl font-heading font-semibold text-[var(--primary)] mb-2">
+          <h3 className="text-xl font-heading font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
             {project.title}
           </h3>
-          <p className="text-[var(--secondary)] text-sm mb-4 leading-relaxed flex-grow">
+          <p className="text-text-light text-sm mb-4 leading-relaxed flex-grow line-clamp-3">
             {project.description}
           </p>
 
-          <div className="flex items-center justify-between text-sm text-[var(--secondary)]">
-            <div className="flex items-center space-x-1">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+            <span className="text-sm text-text-light">{project.date}</span>
+            <span className="inline-flex items-center text-primary font-semibold text-sm group-hover:gap-2 transition-all">
+              View Project
+              <svg
+                className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
               </svg>
-              <span>{project.location}</span>
-            </div>
-            <span>{project.date}</span>
+            </span>
           </div>
-
-          {/* Project Details */}
-          {project.details && (
-            <div className="mt-4 pt-4 border-t border-gray-200">
-              <div className="grid grid-cols-2 gap-4 text-sm">
-                {project.details.value && (
-                  <div>
-                    <div className="text-[var(--secondary)] font-medium">
-                      Value
-                    </div>
-                    <div className="text-[var(--primary)] font-semibold">
-                      {project.details.value}
-                    </div>
-                  </div>
-                )}
-                {project.details.duration && (
-                  <div>
-                    <div className="text-[var(--secondary)] font-medium">
-                      Duration
-                    </div>
-                    <div className="text-[var(--primary)] font-semibold">
-                      {project.details.duration}
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </Link>

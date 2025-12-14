@@ -35,13 +35,13 @@ export default function ServicesSection() {
       id="services"
       className="relative py-16 lg:py-24 overflow-hidden"
       style={{
-        backgroundImage: "url(/bg-4.jfif)",
+        backgroundImage: "url(/bg-6.png)",
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
     >
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-primary/90"></div>
+      <div className="absolute inset-0 bg-primary/70"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

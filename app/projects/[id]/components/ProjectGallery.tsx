@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { type Project } from '../../../data/projects';
+import { useState } from "react";
+import Image from "next/image";
+import { type Project } from "../../../data/projects";
 
 interface ProjectGalleryProps {
   project: Project;
@@ -10,14 +11,14 @@ interface ProjectGalleryProps {
 export default function ProjectGallery({ project }: ProjectGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Generate additional gallery images based on the project
-  const galleryImages = [
+  // Use gallery from project data or fallback to placeholder images
+  const galleryImages = project.gallery || [
     project.image,
-    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-    'https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+    "/filler.png",
+    "/filler.png",
+    "/filler.png",
+    "/filler.png",
+    "/filler.png",
   ];
 
   const openLightbox = (image: string) => {
@@ -30,74 +31,110 @@ export default function ProjectGallery({ project }: ProjectGalleryProps) {
 
   return (
     <>
-      <section className="py-12 lg:py-20 px-4 lg:px-6 bg-gray-50">
-        <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-8 lg:mb-16 animate-slide-up">
-            <h2 className="text-3xl lg:text-4xl font-heading font-bold text-[var(--primary)] mb-6">
-              Project Gallery
-            </h2>
-            <p className="text-lg text-[var(--secondary)] max-w-3xl mx-auto leading-relaxed">
-              Take a closer look at the construction process and final results of this project.
-            </p>
-          </div>
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-full mb-4">
+                <span className="text-xs sm:text-sm font-medium text-foreground uppercase tracking-wide">
+                  Gallery
+                </span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4">
+                Project Gallery
+              </h2>
+              <p className="text-lg text-text-light max-w-3xl mx-auto leading-relaxed">
+                Take a closer look at the construction process and final results
+                of this project.
+              </p>
+            </div>
 
-          {/* Main Featured Image */}
-          <div className="mb-8 animate-fade-in">
-            <div 
-              className="relative h-64 lg:h-96 cursor-pointer overflow-hidden border-r-4 border-b-4 border-[var(--accent)] hover:transform hover:translate-x-1 hover:translate-y-1 transition-all duration-300"
-              onClick={() => openLightbox(project.image)}
-            >
-              <img
-                src={project.image}
-                alt={`${project.title} - Main view`}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300"></div>
-              <div className="absolute bottom-4 left-4 bg-black/70 text-white px-3 py-1 text-sm">
-                Click to enlarge
+            {/* Main Featured Image */}
+            <div className="mb-8">
+              <div
+                className="relative h-96 lg:h-[500px] cursor-pointer overflow-hidden rounded-3xl group"
+                onClick={() => openLightbox(project.image)}
+              >
+                <Image
+                  src={project.image}
+                  alt={`${project.title} - Main view`}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur-sm text-foreground px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
+                  <svg
+                    className="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"
+                    />
+                  </svg>
+                  Click to enlarge
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6">
-            {galleryImages.slice(1).map((image, index) => (
-              <div 
-                key={index}
-                className="relative aspect-square cursor-pointer overflow-hidden border-r-4 border-b-4 border-[var(--accent)] hover:transform hover:translate-x-1 hover:translate-y-1 transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => openLightbox(image)}
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} - Gallery image ${index + 1}`}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors duration-300"></div>
-              </div>
-            ))}
+            {/* Gallery Grid */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {galleryImages.slice(1).map((image, index) => (
+                <div
+                  key={index}
+                  className="relative aspect-square cursor-pointer overflow-hidden rounded-2xl group"
+                  onClick={() => openLightbox(image)}
+                >
+                  <Image
+                    src={image}
+                    alt={`${project.title} - Gallery image ${index + 1}`}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Lightbox Modal */}
       {selectedImage && (
-        <div 
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+        <div
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
           onClick={closeLightbox}
         >
-          <div className="relative max-w-4xl max-h-full">
-            <img
-              src={selectedImage}
-              alt="Gallery image"
-              className="max-w-full max-h-full object-contain"
-            />
+          <div className="relative max-w-6xl max-h-full">
+            <div className="relative w-full h-full">
+              <Image
+                src={selectedImage}
+                alt="Gallery image"
+                width={1200}
+                height={800}
+                className="max-w-full max-h-[90vh] object-contain rounded-2xl"
+              />
+            </div>
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 w-10 h-10 flex items-center justify-center transition-colors duration-300"
+              className="absolute top-4 right-4 text-white bg-black/50 hover:bg-black/70 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>

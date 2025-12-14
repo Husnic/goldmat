@@ -65,8 +65,8 @@ export default function ProjectSnapshot() {
                       {project.description}
                     </p>
                     <div className="flex items-center justify-between text-xs text-text-light">
-                      <span>{project.role}</span>
-                      <span>{project.year}</span>
+                      <span>{project.location}</span>
+                      <span>{project.date}</span>
                     </div>
                   </div>
                 </div>

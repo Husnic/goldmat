@@ -1,27 +1,26 @@
+import Image from "next/image";
+
 export default function ContactHero() {
   return (
-    <section className="relative py-20 lg:py-32 px-4 lg:px-6 min-h-[400px] lg:min-h-[500px]">
+    <section className="relative py-20 lg:py-32 bg-gray-50 overflow-hidden">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')"
-        }}
-      >
-        <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 opacity-20">
+        <Image src="/bg-2.png" alt="Background" fill className="object-cover" />
       </div>
 
-      <div className="container mx-auto max-w-4xl relative z-10 text-center">
-        <div className="animate-slide-up">
-          <div className="text-sm font-semibold text-yellow-400 uppercase tracking-wider mb-6">
-            GET IN TOUCH
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center px-4 py-2 border border-gray-300 rounded-full mb-6">
+            <span className="text-xs sm:text-sm font-medium text-foreground uppercase tracking-wide">
+              Get In Touch
+            </span>
           </div>
-          <h1 className="text-4xl lg:text-6xl font-heading font-bold text-white mb-6 leading-tight">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
             Let's Build Together
           </h1>
-          <p className="text-xl lg:text-2xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-            Ready to start your next construction project? Contact our team of experts 
-            and let's discuss how we can bring your vision to life.
+          <p className="text-lg lg:text-xl text-text-light leading-relaxed max-w-3xl mx-auto">
+            Ready to start your next construction project? Contact our team of
+            experts and let's discuss how we can bring your vision to life.
           </p>
         </div>
       </div>
