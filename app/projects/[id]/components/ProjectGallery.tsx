@@ -11,15 +11,8 @@ interface ProjectGalleryProps {
 export default function ProjectGallery({ project }: ProjectGalleryProps) {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  // Use gallery from project data or fallback to placeholder images
-  const galleryImages = project.gallery || [
-    project.image,
-    "/filler.png",
-    "/filler.png",
-    "/filler.png",
-    "/filler.png",
-    "/filler.png",
-  ];
+  // Build gallery images array: main image followed by any additional gallery images
+  const galleryImages: string[] = [project.image, ...(project.gallery ?? [])];
 
   const openLightbox = (image: string) => {
     setSelectedImage(image);
@@ -83,7 +76,7 @@ export default function ProjectGallery({ project }: ProjectGalleryProps) {
 
             {/* Gallery Grid */}
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {galleryImages.slice(1).map((image, index) => (
+              {galleryImages.slice(1).map((image: string, index: number) => (
                 <div
                   key={index}
                   className="relative aspect-square cursor-pointer overflow-hidden rounded-2xl group"

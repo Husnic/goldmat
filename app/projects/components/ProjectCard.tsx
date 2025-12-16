@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import projectImages from "../../constants/projectImages";
 import { type Project } from "../../data/projects";
 
 interface ProjectCardProps {
@@ -13,13 +14,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
         <div className="relative h-64 overflow-hidden">
           <Image
-            src={project.image}
+            src={projectImages[project.id]}
             alt={project.title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            className="object-cover w-full h-full"
           />
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent"></div>
 
           {/* Category Badge */}
           <div className="absolute top-4 left-4">
@@ -43,11 +44,11 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           </div>
         </div>
 
-        <div className="p-6 flex-grow flex flex-col">
+        <div className="p-6 grow flex flex-col">
           <h3 className="text-xl font-heading font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
             {project.title}
           </h3>
-          <p className="text-text-light text-sm mb-4 leading-relaxed flex-grow line-clamp-3">
+          <p className="text-text-light text-sm mb-4 leading-relaxed grow line-clamp-3">
             {project.description}
           </p>
 
