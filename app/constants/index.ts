@@ -140,6 +140,14 @@ export const CORE_COMPETENCIES = [
   },
 ];
 
+// Project Categories
+export const PROJECT_CATEGORIES = [
+  { id: "all", label: "All Projects" },
+  { id: "commercial", label: "Commercial" },
+  { id: "residential", label: "Residential" },
+  { id: "infrastructure", label: "Infrastructure" },
+];
+
 // Featured Projects
 export const FEATURED_PROJECTS = [
   {
@@ -151,13 +159,7 @@ export const FEATURED_PROJECTS = [
     tags: ["Commercial", "Banking", "Infrastructure"],
     image: "/projects/gtbank-ogun/main.jpg",
     description: "Construction of Guarantee Trust Bank developmental project.",
-    gallery: [
-      "/projects/gtbank-ogun/main.jpg",
-      "/projects/gtbank-ogun/main.jpg",
-      "/projects/gtbank-ogun/main.jpg",
-      "/projects/gtbank-ogun/main.jpg",
-      "/projects/gtbank-ogun/main.jpg",
-    ],
+    gallery: ["/projects/gtbank-ogun/main.jpg", "/projects/gtbank-ogun/1.jpg"],
     details: {
       client: "Guarantee Trust Bank",
       duration: "12 months",
@@ -180,9 +182,6 @@ export const FEATURED_PROJECTS = [
     image: "/projects/imperial-garden/main.jpg",
     description: "Residential estate development with modern infrastructure.",
     gallery: [
-      "/projects/imperial-garden/main.jpg",
-      "/projects/imperial-garden/main.jpg",
-      "/projects/imperial-garden/main.jpg",
       "/projects/imperial-garden/main.jpg",
       "/projects/imperial-garden/main.jpg",
     ],
@@ -211,9 +210,6 @@ export const FEATURED_PROJECTS = [
     gallery: [
       "/projects/maryland-mall/main.jpg",
       "/projects/maryland-mall/main.jpg",
-      "/projects/maryland-mall/main.jpg",
-      "/projects/maryland-mall/main.jpg",
-      "/projects/maryland-mall/main.jpg",
     ],
     details: {
       client: "Maryland Properties Ltd",
@@ -229,14 +225,6 @@ export const FEATURED_PROJECTS = [
   },
 ];
 
-// Project Categories
-export const PROJECT_CATEGORIES = [
-  { id: "all", label: "All Projects" },
-  { id: "commercial", label: "Commercial" },
-  { id: "residential", label: "Residential" },
-  { id: "infrastructure", label: "Infrastructure" },
-];
-
 // All Projects - Complete list of all Goldmat projects
 export const ALL_PROJECTS = [
   ...FEATURED_PROJECTS,
@@ -247,14 +235,13 @@ export const ALL_PROJECTS = [
     date: "2021",
     category: "commercial" as const,
     tags: ["Commercial", "Event Center", "Construction"],
-    image: "/filler.png",
+    image: "/projects/he-cares-event-center/main.jpg",
     description: "Event center construction and structural design.",
     gallery: [
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
+      "/projects/he-cares-event-center/main.jpg",
+      "/projects/he-cares-event-center/1.jpg",
+      "/projects/he-cares-event-center/2.jpg",
+      "/projects/he-cares-event-center/3.jpg",
     ],
     details: {
       duration: "10 months",
@@ -272,14 +259,12 @@ export const ALL_PROJECTS = [
     date: "2021",
     category: "residential" as const,
     tags: ["Residential", "Apartment", "Housing"],
-    image: "/filler.png",
+    image: "/projects/he-cares-apartment/main.jpg",
     description: "Residential apartment complex development.",
     gallery: [
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
+      "/projects/he-cares-apartment/main.jpg",
+      "/projects/he-cares-apartment/main.jpg",
+      "/projects/he-cares-apartment/main.jpg",
     ],
     details: {
       duration: "14 months",
@@ -297,14 +282,12 @@ export const ALL_PROJECTS = [
     date: "2018",
     category: "residential" as const,
     tags: ["Residential", "Private Home", "Custom Build"],
-    image: "/filler.png",
+    image: "/projects/olufemi-alao-house/main.jpg",
     description: "Residential building construction and structural design.",
     gallery: [
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
+      "/projects/olufemi-alao-house/main.jpg",
+      "/projects/olufemi-alao-house/main.jpg",
+      "/projects/olufemi-alao-house/main.jpg",
     ],
     details: {
       duration: "8 months",
@@ -318,15 +301,15 @@ export const ALL_PROJECTS = [
     date: "2019",
     category: "infrastructure" as const,
     tags: ["Infrastructure", "Gas Station", "Industrial"],
-    image: "/filler.png",
+    image: "/projects/rom-oil/main.jpg",
     description:
       "Industrial facility foundations and construction for LNG gas station.",
     gallery: [
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
+      "/projects/rom-oil/main.jpg",
+      "/projects/rom-oil/1.jpg",
+      "/projects/rom-oil/2.jpg",
+      "/projects/rom-oil/3.jpg",
+      "/projects/rom-oil/4.jpg",
     ],
     details: {
       client: "ROM Oil",
@@ -341,14 +324,11 @@ export const ALL_PROJECTS = [
     date: "2020",
     category: "infrastructure" as const,
     tags: ["Infrastructure", "Warehouse", "Industrial"],
-    image: "/filler.png",
+    image: "/projects/west-energy-warehouse/main.jpg",
     description: "Warehouse construction for industrial pipe storage.",
     gallery: [
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
+      "/projects/west-energy-warehouse/main.jpg",
+      "/projects/west-energy-warehouse/main.jpg",
     ],
     details: {
       client: "West Energy",
@@ -361,21 +341,15 @@ export const ALL_PROJECTS = [
     },
   },
   {
-    id: "residential-ikoyi",
+    id: "osborne-ikoyi",
     title: "Residential Development at Osborne Road",
     location: "Ikoyi, Lagos",
     date: "2020",
     category: "residential" as const,
     tags: ["Residential", "High-Rise", "Luxury"],
-    image: "/filler.png",
+    image: "/projects/osborne/main.jpg",
     description: "High-rise residential development with modern amenities.",
-    gallery: [
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-    ],
+    gallery: ["/projects/osborne/main.jpg"],
     details: {
       duration: "20 months",
       value: "₦200M+",
@@ -389,14 +363,12 @@ export const ALL_PROJECTS = [
     date: "2021",
     category: "commercial" as const,
     tags: ["Commercial", "Development", "Construction"],
-    image: "/filler.png",
+    image: "/projects/tarm-ogbomosho/main.jpg",
     description: "Commercial development project in Ogbomosho.",
     gallery: [
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
-      "/filler.png",
+      "/projects/tarm-ogbomosho/main.jpg",
+      "/projects/tarm-ogbomosho/1.jpg",
+      "/projects/tarm-ogbomosho/2.jpg",
     ],
     details: {
       duration: "12 months",
@@ -437,18 +409,46 @@ export const MISSION_CONTENT = {
 // Team Members
 export const TEAM_MEMBERS = [
   {
-    name: "Engr. Oyedibu Mathew Oyeladun",
-    role: "Principal Partner / Project Manager",
-    credentials: "B.Tech, MNICE, MNSE, R.Eng",
-    image: "/team/mathew-oyedibu.jpg",
-    bio: "Experienced project manager with extensive expertise in civil and structural engineering.",
+    name: "Engr. Oyedibu Mathew",
+    position: "Principal Partner / Project Manager",
+    credentials: "MNSE, MNICE, COREN",
+    image: "/team/oyedibu-mathew.jpeg",
+    bio: "Principal partner with extensive expertise in civil engineering and project management, leading Goldmat's vision for excellence.",
   },
   {
-    name: "Engr. Oyedibu John Gboyega",
-    role: "Structural Engineer",
-    credentials: "M.Sc Construction Management, MNSE, R.Eng",
-    image: "/team/john-oyedibu.jpg",
-    bio: "Specialized in structural engineering and construction management.",
+    name: "Engr. Oyedibu, John Gboyega",
+    position: "Structural Engineer",
+    credentials: "M.Sc, COREN",
+    image: "/team/john-gboyega.jpeg",
+    bio: "Specialized in structural engineering with extensive experience in designing safe and innovative structures.",
+  },
+  {
+    name: "Engr. Mobolaji Peter",
+    position: "Civil Engineer",
+    credentials: "M.Sc, COREN",
+    image: "/team/mobolaji-peter.jpeg",
+    bio: "Expert civil engineer with comprehensive knowledge in construction and infrastructure development.",
+  },
+  {
+    name: "Abdulbaasit Abdussalaam",
+    position: "Graduate Engineer",
+    credentials: "",
+    image: "/team/abdusalam-abdulbasit.jpeg",
+    bio: "Emerging engineering professional bringing fresh perspectives and technical expertise to our projects.",
+  },
+  {
+    name: "Surv. Adeleke Joel Tunde",
+    position: "Land Surveyor",
+    credentials: "",
+    image: "/team/adeleke-joel.jpg",
+    bio: "Skilled land surveyor ensuring accurate site measurements and property boundary determinations.",
+  },
+  {
+    name: "Peter Mobolaji",
+    position: "Quantity Surveyor",
+    credentials: "",
+    image: "/team/peter-omobolaji.jpeg",
+    bio: "Experienced quantity surveyor managing project costs and ensuring optimal resource allocation.",
   },
 ];
 

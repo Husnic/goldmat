@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import projectImages from "../../constants/projectImages";
 import { type Project } from "../../data/projects";
 
 interface ProjectCardProps {
@@ -14,7 +13,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
         <div className="relative h-64 overflow-hidden">
           <Image
-            src={projectImages[project.id]}
+            src={project.image}
             alt={project.title}
             fill
             className="object-cover w-full h-full"
