@@ -47,7 +47,7 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
                         key={index}
                         className="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors"
                       >
-                        <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <div className="w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center shrink-0 mt-0.5">
                           <svg
                             className="w-4 h-4 text-accent"
                             fill="none"

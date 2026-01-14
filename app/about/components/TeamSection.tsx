@@ -1,31 +1,29 @@
+import Image from "next/image";
+
 export default function TeamSection() {
   const team = [
     {
-      name: "David Martinez",
-      position: "CEO & Founder",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      name: "Adeleke Joel Tunde",
+      position: "Land Surveyor",
+      image:"/team/adeleke.jpg",
       bio: "With over 20 years in construction and engineering, David leads our vision for innovative building solutions.",
     },
     {
-      name: "Sarah Chen",
+      name: "Engr. Mobolagi Peter",
       position: "Chief Engineer",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
-      bio: "Sarah brings expertise in structural engineering and sustainable design to every project we undertake.",
+      image: "/team/mobolaji.jpg",
+      bio: "Engr Mobolaji Peter (Msc, COREN) is a civil engineer with expertise in structural engineering and sustainable design to every project we undertake.",
     },
     {
       name: "Michael Rodriguez",
       position: "Project Director",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      image: "/team/michael.jpg",
       bio: "Michael ensures seamless project execution and maintains our high standards of quality and timeline adherence.",
     },
     {
       name: "Emily Johnson",
       position: "Operations Manager",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80",
+      image: "/team/emily.jpg",
       bio: "Emily oversees daily operations and coordinates between teams to ensure efficient project delivery.",
     },
   ];
@@ -58,10 +56,12 @@ export default function TeamSection() {
                 className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
               >
                 <div className="relative h-64">
-                  <img
+                  <Image
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="p-6">

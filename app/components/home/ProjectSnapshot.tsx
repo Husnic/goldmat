@@ -39,7 +39,7 @@ export default function ProjectSnapshot() {
                       fill
                       className="object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent"></div>
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4">

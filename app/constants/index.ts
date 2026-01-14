@@ -1,3 +1,4 @@
+
 // Site Configuration
 export const SITE_CONFIG = {
   name: "Goldmat Construction Engineering Services Limited",
@@ -171,30 +172,27 @@ export const FEATURED_PROJECTS = [
     },
   },
   {
-    id: "imperial-garden",
-    title: "Imperial Garden Estate",
-    location: "Agodi, Ibadan, Oyo State",
-    date: "2019",
-    category: "residential" as const,
-    tags: ["Residential", "Estate", "Housing"],
-    image: "/projects/imperial-garden/main.jpg",
-    description: "Residential estate development with modern infrastructure.",
+    id: "he-cares-event-center",
+    title: "He Cares Event Center",
+    location: "Ibadan, Oyo State",
+    date: "2021",
+    category: "commercial" as const,
+    tags: ["Commercial", "Event Center", "Construction"],
+    image: "/projects/he-cares-event-center/completed.jpeg",
+    description: "Event center construction and structural design.",
     gallery: [
-      "/projects/imperial-garden/main.jpg",
-      "/projects/imperial-garden/main.jpg",
-      "/projects/imperial-garden/main.jpg",
-      "/projects/imperial-garden/main.jpg",
-      "/projects/imperial-garden/main.jpg",
+      "/filler.png",
+      "/filler.png",
+      "/filler.png",
+      "/filler.png",
+      "/filler.png",
     ],
     details: {
-      client: "Imperial Garden Developers",
-      duration: "18 months",
-      value: "₦80M+",
+      duration: "10 months",
       scope: [
-        "Estate Planning",
-        "Road Construction",
-        "Drainage Systems",
-        "Residential Buildings",
+        "Structural Design",
+        "Construction Management",
+        "Interior Design",
       ],
     },
   },
@@ -247,7 +245,7 @@ export const ALL_PROJECTS = [
     date: "2021",
     category: "commercial" as const,
     tags: ["Commercial", "Event Center", "Construction"],
-    image: "/filler.png",
+    image: "/projects/he-cares-event-center/completed.jpeg",
     description: "Event center construction and structural design.",
     gallery: [
       "/filler.png",
@@ -272,7 +270,7 @@ export const ALL_PROJECTS = [
     date: "2021",
     category: "residential" as const,
     tags: ["Residential", "Apartment", "Housing"],
-    image: "/filler.png",
+    image: "/projects/he-cares-apartment/in-progress-1.jpeg",
     description: "Residential apartment complex development.",
     gallery: [
       "/filler.png",
@@ -297,7 +295,7 @@ export const ALL_PROJECTS = [
     date: "2018",
     category: "residential" as const,
     tags: ["Residential", "Private Home", "Custom Build"],
-    image: "/filler.png",
+    image: "/projects/olufemi-alao-house/main.jpg",
     description: "Residential building construction and structural design.",
     gallery: [
       "/filler.png",
@@ -318,7 +316,7 @@ export const ALL_PROJECTS = [
     date: "2019",
     category: "infrastructure" as const,
     tags: ["Infrastructure", "Gas Station", "Industrial"],
-    image: "/filler.png",
+    image: "/projects/rom-oil/completed.jpg",
     description:
       "Industrial facility foundations and construction for LNG gas station.",
     gallery: [

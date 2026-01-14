@@ -8,7 +8,7 @@ interface ProjectCardProps {
   index: number;
 }
 
-export default function ProjectCard({ project, index }: ProjectCardProps) {
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link href={`/projects/${project.id}`} className="group block h-full">
       <div className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col">
