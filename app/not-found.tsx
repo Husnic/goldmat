@@ -95,10 +95,10 @@ export default function NotFound() {
             </a>
             <br />
             <a
-              href="mailto:oyedibumathew@goldmatengineering.com"
+              href="mailto:info@goldmatengineeringltd.com"
               className="text-sm font-semibold text-[var(--primary)] hover:text-[var(--accent)] transition-colors"
             >
-              oyedibumathew@goldmatengineering.com
+              info@goldmatengineeringltd.com
             </a>
           </div>
         </div>

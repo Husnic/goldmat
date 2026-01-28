@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   tagline: "Engineering Excellence. Built on Expertise.",
   description:
     "Delivering competent professional construction works and multi-disciplinary engineering solutions.",
-  email: "oyedibumathew@goldmatengineering.com",
+  email: "info@goldmatengineeringltd.com",
   phone: "+234 706-1522-038",
   alternatePhone: "+234 807-2832-126",
   addresses: [
@@ -560,6 +560,6 @@ export const FAQ_ITEMS = [
   {
     question: "How can I request a consultation?",
     answer:
-      "You can contact us via email at oyedibumathew@goldmatengineering.com or call us at +234 706-1522-038. You can also fill out our contact form and we'll get back to you promptly.",
+      "You can contact us via email at info@goldmatengineeringltd.com or call us at +234 706-1522-038. You can also fill out our contact form and we'll get back to you promptly.",
   },
 ];

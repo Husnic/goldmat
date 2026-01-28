@@ -28,7 +28,7 @@ export default function Footer() {
             {/* Company Info */}
             <div>
               <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
-                goldmat
+                Goldmat
               </h3>
               <p className="text-text-light leading-relaxed mb-6 max-w-sm">
                 We are creators of transformative spaces that inspire, innovate,
@@ -76,15 +76,15 @@ export default function Footer() {
                     href="tel:+2347061522038"
                     className="text-xl font-semibold text-foreground hover:text-accent transition-colors block"
                   >
-                    +(234) 706 152 2038
+                    +234 706-1522-038
                   </a>
                 </div>
                 <div>
                   <a
-                    href="mailto:oyedibumathew@goldmatengineering.com"
-                    className="text-foreground hover:text-accent transition-colors"
+                    href="mailto:info@goldmatengineeringltd.com"
+                    className="text-foreground hover:text-accent transition-colors break-words break-all"
                   >
-                    oyedibumathew@goldmatengineering.com
+                    info@goldmatengineeringltd.com
                   </a>
                 </div>
                 <div className="flex gap-4 pt-2">
@@ -127,7 +127,9 @@ export default function Footer() {
                 </Link>
                 . All Rights Reserved
               </div>
-              <div className="text-sm text-text-light">Developed by Jafar</div>
+              <a href="https://husnic.com" className="text-sm text-text-light">
+                Developed by Husnic Consulting
+              </a>
             </div>
           </div>
         </div>

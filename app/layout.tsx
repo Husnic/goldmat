@@ -18,7 +18,8 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://goldmat.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL || "https://goldmatengineeringltd.com";
 
 export const metadata: Metadata = {
   title: {
@@ -131,7 +132,7 @@ const jsonLd = {
     contactType: "customer service",
     areaServed: "NG",
     availableLanguage: ["English"],
-    email: "oyedibumathew@goldmatengineering.com",
+    email: "info@goldmatengineeringltd.com",
   },
   sameAs: [
     "https://www.linkedin.com/company/goldmat-engineering",

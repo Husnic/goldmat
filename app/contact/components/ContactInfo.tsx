@@ -24,9 +24,10 @@ export default function ContactInfo() {
       ),
       title: "Office Location",
       details: [
-        "123 Construction Ave",
-        "Building District",
-        "Phoenix, AZ 85001",
+        "Km 46, Old Lagos Road,",
+        "Opposite RSP, Alomoja Road, Ibadan.",
+        "No 4, Phase 6, Peace Estate, Iyana",
+        "Tipper, Ilagbeja, Akingbile, Ibadan.",
       ],
     },
     {
@@ -47,55 +48,10 @@ export default function ContactInfo() {
       ),
       title: "Phone Numbers",
       details: [
-        "Main: (555) 123-4567",
-        "Emergency: (555) 987-6543",
-        "Fax: (555) 123-4568",
-      ],
-    },
-    {
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-          />
-        </svg>
-      ),
-      title: "Email Addresses",
-      details: [
-        "info@goldmatconstruction.com",
-        "projects@goldmatconstruction.com",
-        "support@goldmatconstruction.com",
-      ],
-    },
-    {
-      icon: (
-        <svg
-          className="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-          />
-        </svg>
-      ),
-      title: "Business Hours",
-      details: [
-        "Monday - Friday: 7:00 AM - 6:00 PM",
-        "Saturday: 8:00 AM - 4:00 PM",
-        "Sunday: Emergency Only",
+        "+234 706-1522-038",
+        "+234 806-2744-419",
+        "+234 807-2832-126",
+        "+234 807-2832-126",
       ],
     },
   ];
