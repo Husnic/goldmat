@@ -11,7 +11,7 @@ export default function CallToAction() {
             {/* Background Image */}
             <div className="absolute inset-0 opacity-20">
               <Image
-                src="/bg-6.webp"
+                src="/bg-6.png"
                 alt="Background"
                 fill
                 className="object-cover"

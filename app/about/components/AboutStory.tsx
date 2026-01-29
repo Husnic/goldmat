@@ -41,7 +41,7 @@ export default function AboutStory() {
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-gray-50 p-8 text-center rounded-3xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-2">
-                    200+
+                    22+
                   </div>
                   <div className="text-text-light font-medium">
                     Projects Completed
@@ -57,7 +57,7 @@ export default function AboutStory() {
                 </div>
                 <div className="bg-gray-50 p-8 text-center rounded-3xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-2">
-                    95%
+                    99%
                   </div>
                   <div className="text-text-light font-medium">
                     Client Satisfaction
@@ -65,7 +65,7 @@ export default function AboutStory() {
                 </div>
                 <div className="bg-gray-50 p-8 text-center rounded-3xl hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                   <div className="text-4xl lg:text-5xl font-heading font-bold text-primary mb-2">
-                    50+
+                    15+
                   </div>
                   <div className="text-text-light font-medium">
                     Team Members

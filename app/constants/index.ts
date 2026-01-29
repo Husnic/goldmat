@@ -162,8 +162,8 @@ export const FEATURED_PROJECTS = [
     gallery: ["/projects/gtbank-ogun/main.jpg", "/projects/gtbank-ogun/1.jpg"],
     details: {
       client: "Guarantee Trust Bank",
-      duration: "12 months",
-      value: "₦50M+",
+      // duration: "12 months",
+      // value: "₦50M+",
       scope: [
         "Structural Engineering",
         "Foundation Works",
@@ -186,9 +186,9 @@ export const FEATURED_PROJECTS = [
       "/projects/imperial-garden/main.jpg",
     ],
     details: {
-      client: "Imperial Garden Developers",
-      duration: "18 months",
-      value: "₦80M+",
+      // client: "Imperial Garden Developers",
+      // duration: "18 months",
+      // value: "₦80M+",
       scope: [
         "Estate Planning",
         "Road Construction",
@@ -212,9 +212,9 @@ export const FEATURED_PROJECTS = [
       "/projects/maryland-mall/main.jpg",
     ],
     details: {
-      client: "Maryland Properties Ltd",
-      duration: "24 months",
-      value: "₦150M+",
+      // client: "Maryland Properties Ltd",
+      // duration: "24 months",
+      // value: "₦150M+",
       scope: [
         "Structural Design",
         "Construction Management",
@@ -344,15 +344,15 @@ export const ALL_PROJECTS = [
     id: "osborne-ikoyi",
     title: "Residential Development at Osborne Road",
     location: "Ikoyi, Lagos",
-    date: "2020",
+    date: "2010",
     category: "residential" as const,
     tags: ["Residential", "High-Rise", "Luxury"],
     image: "/projects/osborne/main.jpg",
     description: "High-rise residential development with modern amenities.",
     gallery: ["/projects/osborne/main.jpg"],
     details: {
-      duration: "20 months",
-      value: "₦200M+",
+      // duration: "20 months",
+      // value: "₦200M+",
       scope: ["High-Rise Construction", "Luxury Finishes", "Modern Amenities"],
     },
   },
