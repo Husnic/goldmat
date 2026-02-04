@@ -425,19 +425,19 @@ export const TEAM_MEMBERS = [
     isPassportSize: true,
   },
   {
+    name: "Olatoro Oyedibu",
+    position: "Director",
+    credentials: "",
+    image: "/team/olatoro-oyedibu.jpeg",
+    bio: "Director overseeing strategic operations and business development for Goldmat Construction.",
+    isPassportSize: false,
+  },
+  {
     name: "Engr. Mobolaji Peter",
     position: "Civil Engineer",
     credentials: "M.Sc, COREN",
     image: "/team/mobolaji-peter.jpeg",
     bio: "Expert civil engineer with comprehensive knowledge in construction and infrastructure development.",
-    isPassportSize: false,
-  },
-  {
-    name: "Abdulbaasit Abdussalaam",
-    position: "Graduate Engineer",
-    credentials: "",
-    image: "/team/abdusalam-abdulbasit.jpeg",
-    bio: "Emerging engineering professional bringing fresh perspectives and technical expertise to our projects.",
     isPassportSize: false,
   },
   {
@@ -455,14 +455,6 @@ export const TEAM_MEMBERS = [
     image: "/team/funke-otemowo.jpeg",
     bio: "Experienced quantity surveyor managing project costs and ensuring optimal resource allocation.",
     isPassportSize: true,
-  },
-  {
-    name: "Olatoro Oyedibu",
-    position: "Director",
-    credentials: "",
-    image: "/team/olatoro-oyedibu.jpeg",
-    bio: "Director overseeing strategic operations and business development for Goldmat Construction.",
-    isPassportSize: false,
   },
   {
     name: "Taiwo Ogunkunle",
@@ -487,6 +479,14 @@ export const TEAM_MEMBERS = [
     image: "/team/azubike-oneh.jpeg",
     bio: "Dedicated site engineer ensuring quality execution and safety standards on construction sites.",
     isPassportSize: true,
+  },
+  {
+    name: "Abdulbaasit Abdussalaam",
+    position: "Graduate Engineer",
+    credentials: "",
+    image: "/team/abdusalam-abdulbasit.jpeg",
+    bio: "Emerging engineering professional bringing fresh perspectives and technical expertise to our projects.",
+    isPassportSize: false,
   },
 ];
 
