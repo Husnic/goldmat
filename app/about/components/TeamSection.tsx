@@ -23,31 +23,35 @@ export default function TeamSection() {
 
           {/* Team Grid */}
           <div className="flex flex-wrap justify-center gap-6">
-            {TEAM_MEMBERS.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-full md:w-[calc(50%-0.75rem)] lg:min-w-[300px] max-w-[370px] lg:flex-1"
-              >
-                <div className="relative h-64">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover object-top"
-                  />
+            {TEAM_MEMBERS.map((member, index) => {
+              return (
+                <div
+                  key={index}
+                  className="bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-full md:w-[calc(50%-0.75rem)] lg:min-w-[300px] max-w-[370px] lg:flex-1"
+                >
+                  <div
+                    className={`relative h-64 ${member.isPassportSize ? "bg-white" : ""}`}
+                  >
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className={`w-full h-full ${member.isPassportSize ? "object-contain" : "object-cover object-top"}`}
+                    />
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-heading font-semibold text-foreground mb-2">
+                      {member.name}
+                    </h3>
+                    <p className="text-accent font-medium mb-3">
+                      {member.position}
+                    </p>
+                    <p className="text-text-light text-sm leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-heading font-semibold text-foreground mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-accent font-medium mb-3">
-                    {member.position}
-                  </p>
-                  <p className="text-text-light text-sm leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

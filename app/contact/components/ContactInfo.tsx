@@ -96,7 +96,7 @@ export default function ContactInfo() {
         </div>
 
         {/* Map Placeholder */}
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <div className="bg-gray-200 h-64 rounded-3xl flex items-center justify-center">
             <div className="text-center">
               <svg
@@ -121,7 +121,7 @@ export default function ContactInfo() {
               <p className="text-gray-500">Interactive Map Coming Soon</p>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

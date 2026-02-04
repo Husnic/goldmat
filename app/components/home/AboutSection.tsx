@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ABOUT_CONTENT } from "@/app/constants";
 
 export default function AboutSection() {
@@ -28,6 +29,25 @@ export default function AboutSection() {
 
             {/* Right Content - Description & CTA */}
             <div className="space-y-6 lg:pt-12">
+              {/* CEO Avatar */}
+              <div className="flex items-center gap-4 mb-6">
+                <div className="relative w-16 h-16 rounded-full overflow-hidden ring-2 ring-accent/20">
+                  <Image
+                    src="/team/oyedibu-mathew.jpeg"
+                    alt="Engr. Oyedibu Mathew - CEO"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">
+                    Engr. Oyedibu Mathew
+                  </p>
+                  <p className="text-sm text-text-light">
+                    Principal Partner / CEO
+                  </p>
+                </div>
+              </div>
               {/* Main Description */}
               <p className="text-base sm:text-lg text-foreground font-semibold leading-relaxed">
                 {ABOUT_CONTENT.title}

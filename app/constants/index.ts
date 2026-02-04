@@ -414,6 +414,7 @@ export const TEAM_MEMBERS = [
     credentials: "MNSE, MNICE, COREN",
     image: "/team/oyedibu-mathew.jpeg",
     bio: "Principal partner with extensive expertise in civil engineering and project management, leading Goldmat's vision for excellence.",
+    isPassportSize: true,
   },
   {
     name: "Engr. Oyedibu, John Gboyega",
@@ -421,6 +422,7 @@ export const TEAM_MEMBERS = [
     credentials: "M.Sc, COREN",
     image: "/team/john-gboyega.jpeg",
     bio: "Specialized in structural engineering with extensive experience in designing safe and innovative structures.",
+    isPassportSize: true,
   },
   {
     name: "Engr. Mobolaji Peter",
@@ -428,6 +430,7 @@ export const TEAM_MEMBERS = [
     credentials: "M.Sc, COREN",
     image: "/team/mobolaji-peter.jpeg",
     bio: "Expert civil engineer with comprehensive knowledge in construction and infrastructure development.",
+    isPassportSize: false,
   },
   {
     name: "Abdulbaasit Abdussalaam",
@@ -435,6 +438,7 @@ export const TEAM_MEMBERS = [
     credentials: "",
     image: "/team/abdusalam-abdulbasit.jpeg",
     bio: "Emerging engineering professional bringing fresh perspectives and technical expertise to our projects.",
+    isPassportSize: false,
   },
   {
     name: "Surv. Adeleke Joel Tunde",
@@ -442,13 +446,47 @@ export const TEAM_MEMBERS = [
     credentials: "",
     image: "/team/adeleke-joel.jpg",
     bio: "Skilled land surveyor ensuring accurate site measurements and property boundary determinations.",
+    isPassportSize: false,
   },
   {
-    name: "Peter Mobolaji",
+    name: "Funke Otemowo",
     position: "Quantity Surveyor",
     credentials: "",
-    image: "/team/peter-omobolaji.jpeg",
+    image: "/team/funke-otemowo.jpeg",
     bio: "Experienced quantity surveyor managing project costs and ensuring optimal resource allocation.",
+    isPassportSize: true,
+  },
+  {
+    name: "Olatoro Oyedibu",
+    position: "Director",
+    credentials: "",
+    image: "/team/olatoro-oyedibu.jpeg",
+    bio: "Director overseeing strategic operations and business development for Goldmat Construction.",
+    isPassportSize: false,
+  },
+  {
+    name: "Taiwo Ogunkunle",
+    position: "Architect",
+    credentials: "",
+    image: "/team/taiwo-ogunkunle.jpeg",
+    bio: "Creative architect designing innovative and functional structures that meet client needs.",
+    isPassportSize: false,
+  },
+  {
+    name: "Ali Mubarak",
+    position: "Civil Engineer",
+    credentials: "",
+    image: "/team/ali-mubarak.jpeg",
+    bio: "Skilled civil engineer contributing to infrastructure development and construction projects.",
+    isPassportSize: true,
+  },
+  {
+    name: "Azubike Oneh",
+    position: "Site Engineer",
+    credentials: "",
+    image: "/team/azubike-oneh.jpeg",
+    bio: "Dedicated site engineer ensuring quality execution and safety standards on construction sites.",
+    isPassportSize: true,
   },
 ];
 
@@ -481,8 +519,8 @@ export const CTA_CONTENT = {
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    company: "Victoria Development Corp",
+    name: "Adebayo Oluwaseun",
+    company: "__",
     role: "Project Manager",
     content:
       "Goldmat delivered exceptional results on our commercial project. Their attention to detail and commitment to quality exceeded our expectations.",
@@ -490,8 +528,8 @@ export const TESTIMONIALS = [
   },
   {
     id: 2,
-    name: "Michael Chen",
-    company: "Industrial Solutions Ltd",
+    name: "Okonkwo Chukwuemeka",
+    company: "__",
     role: "Operations Director",
     content:
       "Professional, reliable, and innovative. Goldmat completed our industrial facility on time and within budget.",
@@ -499,8 +537,8 @@ export const TESTIMONIALS = [
   },
   {
     id: 3,
-    name: "Emily Rodriguez",
-    company: "Urban Properties Inc",
+    name: "Afolabi Temitope",
+    company: "__",
     role: "Development Lead",
     content:
       "Their engineering expertise and project management skills are unmatched. Highly recommended for any construction project.",
@@ -508,8 +546,8 @@ export const TESTIMONIALS = [
   },
   {
     id: 4,
-    name: "David Okonkwo",
-    company: "Retail Ventures Nigeria",
+    name: "Olayinka Babatunde",
+    company: "__",
     role: "CEO",
     content:
       "From concept to completion, Goldmat demonstrated professionalism and technical excellence. Our mall project was delivered ahead of schedule.",
@@ -517,8 +555,8 @@ export const TESTIMONIALS = [
   },
   {
     id: 5,
-    name: "Aisha Mohammed",
-    company: "Infrastructure Development Ltd",
+    name: "Yusuf Abdullahi",
+    company: "__",
     role: "Project Coordinator",
     content:
       "Outstanding structural engineering services. Their team's expertise in complex infrastructure projects is truly impressive.",
@@ -526,8 +564,8 @@ export const TESTIMONIALS = [
   },
   {
     id: 6,
-    name: "James Adebayo",
-    company: "Estate Developers PLC",
+    name: "Adekunle Folashade",
+    company: "__",
     role: "Managing Director",
     content:
       "Goldmat's commitment to safety and quality is evident in every aspect of their work. A trusted partner for our residential projects.",

@@ -6,8 +6,8 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <ContactHero />
-      <div className="grid lg:grid-cols-2">
-        <ContactForm />
+      <div className="">
+        {/* <ContactForm /> */}
         <ContactInfo />
       </div>
     </div>
